@@ -1,0 +1,37 @@
+@mixin flexBox($direction, $space) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $space;
+  align-items: center;
+}
+@mixin flexBoxCol($direction, $space, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $space;
+  align-items: $align;
+}
+@mixin largeSize {
+  color: $colorRed;
+  font-size: map-get($fontSize, extraLarge);
+  font-weight: map-get($fontWeights, bolder);
+  font-family: map-get($fontFamily, font-family-large);
+}
+@mixin straightLine {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 80px;
+  border-radius: 10px;
+  background-color: $colorRed;
+  margin: 0.3rem 0rem;
+}
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}
+@mixin girdTest($minWidth) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($minWidth, 1fr));
+}
+@mixin boxShadow {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}

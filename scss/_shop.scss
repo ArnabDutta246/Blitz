@@ -1,0 +1,97 @@
+.shop {
+  height: auto;
+  width: 100%;
+  background: $colorDarker;
+  color: $colorWhite;
+  padding: 5.5rem 0rem;
+  .shoes__card-box {
+    margin-top: 20px;
+    padding: 3rem 6rem;
+    @include flexBox(row, space-around);
+    &__single-box {
+      @include transition-ease;
+      cursor: pointer;
+      height: 400px;
+      width: auto;
+      border-radius: 12px;
+      padding: 2rem 0.1rem;
+      img {
+        margin-top: 2.1rem;
+        height: 190px;
+        transform: rotate(18px) scale3d(1.1, 1.1, 1.1);
+      }
+      &__info {
+        @include flexBox(row, space-around);
+        &__title {
+          text-transform: textTransformFunction(U);
+          font-weight: fontWeightFunction(bolder);
+          font-family: fontFamilyFunction(font-family-small);
+          display: block;
+        }
+        &__star {
+          display: block;
+          i {
+            font-size: fontSizeFunction(body);
+            color: $colorYellow;
+          }
+        }
+        &__price {
+          font-size: fontSizeFunction(semiBigTitle);
+          font-weight: fontWeightFunction(bolder);
+          font-family: fontFamilyFunction(font-family-small);
+        }
+      }
+      .add-cart-button {
+        margin: 0.5rem auto;
+        width: 60%;
+        padding: 8px 40px;
+        border: 3px solid $colorWhite;
+        color: $colorWhite;
+        font-size: fontSizeFunction(body);
+        font-weight: fontWeightFunction(bold) + 100;
+        font-family: fontFamilyFunction(font-family-small);
+        text-transform: textTransformFunction(U);
+        text-align: center;
+        letter-spacing: 2px;
+        cursor: pointer;
+        background: none;
+        position: relative;
+        @include transition-ease;
+        z-index: 2;
+        &::before {
+          content: "";
+          z-index: -1;
+          background: $colorRed;
+          position: absolute;
+          width: 0%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          @include transition-ease;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.shoes__card-box__single-box:nth-child(1) {
+  border: 1px solid rgb(37, 167, 85);
+
+  &:hover {
+    background: rgb(37, 167, 85);
+  }
+}
+.shoes__card-box__single-box:nth-child(2) {
+  border: 1px solid $colorBlueLight;
+  &:hover {
+    background: $colorBlueLight;
+  }
+}
+.shoes__card-box__single-box:nth-child(3) {
+  border: 1px solid $colorRed;
+  &:hover {
+    background: $colorRed;
+  }
+}

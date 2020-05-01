@@ -1,0 +1,207 @@
+.navbar {
+  z-index: 999;
+  position: absolute;
+  top: 26px;
+  left: 0;
+  width: 90%;
+  margin: 0 auto;
+  @include flexBox(row, space-between);
+  padding: 0rem 3rem;
+  &__brand-logo {
+    img {
+      margin: 0.3rem 0rem;
+      height: 90px;
+    }
+  }
+  &__menus ul {
+    list-style-type: none;
+    li {
+      float: left;
+      margin: 0px 1rem;
+      font-family: fontFamilyFunction(font-family-small);
+      font-size: fontSizeFunction(title) * 0.8;
+      text-transform: textTransformFunction(U);
+      color: $colorWhite;
+      a i:first-child {
+        color: yellow;
+      }
+    }
+  }
+  // &::after {
+  //   @include straightLine;
+  // }
+}
+.owl-carousel {
+  height: auto;
+  position: relative;
+  .owl-buttons {
+    visibility: hidden;
+  }
+
+  .owl-pagination {
+    position: absolute;
+    right: 7%;
+    bottom: 10%;
+    transform: rotate(0deg);
+    .owl-page {
+      margin: 5px;
+    }
+  }
+}
+.owl-theme .owl-controls {
+  margin-top: -30px !important;
+  text-align: center;
+}
+.owl-theme .owl-controls .owl-page span {
+  display: block;
+  width: 19px !important;
+  height: 19px !important;
+  margin: 5px 7px;
+  opacity: 0.5;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  background: #00ffa5 !important;
+}
+.owl-item .active {
+  width: 100% !important;
+}
+.item {
+  height: 100vh !important;
+  width: 100vw !important;
+  color: $colorWhite;
+  background: $colorDark;
+
+  .banner__one {
+    @include flexBox(row, space-between);
+    height: 100%;
+    width: calc(100%-9rem);
+    color: $colorWhite;
+    padding: 0rem 2rem;
+    //background-color: $colorDark;
+    background: linear-gradient(
+        to left,
+        rgba($colorDark, 0.9),
+        rgba($colorDarker, 0.3)
+      ),
+      url("../img/logo.png");
+    .banner_one-image {
+      padding-top: 9rem;
+      img {
+        height: 430px;
+        margin: 5rem 0rem;
+        transform: rotate(18deg) scale3d(1.25, 1.25, 1.5);
+      }
+    }
+    .banner_one-text {
+      padding-top: 5rem;
+      text-align: right;
+      margin-right: 4rem;
+      .top {
+        display: block;
+        font-family: fontFamilyFunction(font-family-large);
+        font-size: fontSizeFunction(extraLarge) * 1.2;
+        text-transform: textTransformFunction(U);
+        font-weight: fontWeightFunction(bolder);
+        margin: 0px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        letter-spacing: 5px;
+        color: $colorRed;
+      }
+      .center {
+        display: block;
+        font-family: fontFamilyFunction(font-family-large);
+        font-size: fontSizeFunction(extraLarge) * 1.6;
+        text-transform: textTransformFunction(U);
+        font-weight: fontWeightFunction(bolder);
+        margin: 0px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        letter-spacing: 2px;
+      }
+      .bottom {
+        display: block;
+        font-family: fontFamilyFunction(font-family-small);
+        text-transform: textTransformFunction(U);
+        letter-spacing: 6px;
+      }
+      .footnote {
+        display: block;
+        font-family: fontFamilyFunction(font-family-small);
+        text-transform: textTransformFunction(C);
+        color: $colorGrey;
+        font-size: fontSizeFunction(footNote);
+      }
+    }
+  }
+  .banner__two {
+    @extend .banner__one;
+    background-color: $colorBlueDeeper;
+    .banner_one-text {
+      .top {
+        color: #00bcd4;
+      }
+    }
+  }
+  .banner__three {
+    @extend .banner__one;
+    background-color: $colorRed;
+  }
+}
+//---------------custom button---------------------
+.custom-button {
+  float: right;
+  margin: 1.5rem 0rem;
+  width: 9rem;
+  padding: 18px 40px;
+  border: 3px solid $colorRed;
+  color: $colorWhite;
+  font-size: fontSizeFunction(title);
+  font-weight: fontWeightFunction(bold) + 100;
+  font-family: fontFamilyFunction(font-family-small);
+  text-transform: textTransformFunction(U);
+  text-align: center;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background: none;
+  position: relative;
+  @include transition-ease;
+  z-index: 2;
+  &::before {
+    content: "";
+    z-index: -1;
+    background: $colorRed;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    @include transition-ease;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}
+//---------------custom button---------------------
+
+// preloader design
+.preloader {
+  height: 100%;
+  width: 100%;
+  background-color: $colorDarker;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include transition-ease;
+  z-index: 999999;
+  h3 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    color: $colorBlueLigter;
+    font-size: fontSizeFunction(extraLarge) * 2;
+    font-family: fontFamilyFunction(font-family-sub-one);
+  }
+}

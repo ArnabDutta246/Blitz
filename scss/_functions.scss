@@ -1,0 +1,13 @@
+//all functions
+@function fontWeightFunction($weight_name) {
+  @return map-get($fontWeights, $weight_name);
+}
+@function fontSizeFunction($size_name) {
+  @return map-get($fontSize, $size_name);
+}
+@function fontFamilyFunction($font_name) {
+  @return map-get($fontFamily, $font_name);
+}
+@function textTransformFunction($fontTransform) {
+  @return map-get($textTransform, $fontTransform);
+}

@@ -1,0 +1,39 @@
+$colorDark: #282828;
+$colorBlueLigter: #3500d3;
+$colorBlueLight: #240090;
+$colorBlueDeep: #190061;
+$colorBlueDeeper: #0c0032;
+$colorWhite: #ffff;
+$colorRed: #c3073f;
+$colorRedDeep: #950740;
+$colorRedDeeper: #6f2232;
+$colorGrey: #4e4e50;
+$colorDarker: #1a1a1d;
+$colorYellow: yellow;
+$fontSize: (
+  "extraLarge": 40px,
+  "bigTitle": 34px,
+  "semiBigTitle": 28px,
+  "title": 22px,
+  "heading": 20px,
+  "body": 17px,
+  "semiBody": 15px,
+  "footNote": 12px,
+);
+$fontWeights: (
+  "lighter": 200,
+  "light": 400,
+  "bold": 600,
+  "bolder": 900,
+);
+$fontFamily: (
+  "font-family-small": "Roboto Mono",
+  "font-family-large": "Bowlby One SC",
+  "font-family-regular": "cursive",
+  "font-family-sub-one": "Bungee Inline",
+);
+$textTransform: (
+  "U": uppercase,
+  "L": lowercase,
+  "C": capitalize,
+);
